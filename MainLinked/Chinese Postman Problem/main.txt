@@ -1,0 +1,37 @@
+/*
+Know the Hamiltonian Cycle (You cannot revisit a node more than once). 
+The salesman needs to cover all nodes, while the postman needs to cover all arcs. Postman creates arcs by creating one from each odd node. 
+As the number of Nodes increases, the possible Hamiltonian cycles increase drastically.
+How to find an upper bound/estimate for the Hamiltonian cycle?
+
+To find the upperbound use: Prim's and Kruskal's to get a minmimal spanning tree an double minimum spanning tree. 
+Kruskal says to find the smallest weight and connect them to nodes. Everything must be connected, and that is when you know you are done. 
+Add all of them up to get the upper bound. 
+
+Nearest Neighbour Algorithm: 
+Step 1: Chose any starting node
+Step 2: Consider all arcs which join the arc just chosen to ones that have not been chosen. Choose the arc o least weight & inlucde that arc & the new node to the cycle. 
+Step 3: repeat step 2 until all nodes have been chosen
+Step 4: Add the arc that joins that last chosen node to the first chosen node. 
+
+The Lower Bound Algorithm (Does not produce a Hamiltonian cycle but produces the POSSIBLE lowest value):
+Step 1: Chose any starting node, X, (or if already told where to start) and work out the smallest weights of 2 arcs the start node, X. 
+Step 2: Consider the network obtained ignoring X and all arcs connected to X. Find the total weight of the minum connector for th remaining network using Prims
+Step : The sum of the weights from step 1 and step 2 is the lower bound. 
+
+
+So it looks like we use Upper, NN, and lower to estimate the solution. 
+
+Tour Improvement: Swap the middle two terms, if it doesn't work, swap each other nodes until you find the minimum. 
+
+Differences:
+Upper Bound states that we should just take all of the least weight while NNA tells us that we need to make it a Hamiltonian cycle. 
+
+
+Questions:
+What is the difference between prims and Kruskal's when finding the MST?
+Why is it called a cycle for the NNA algorithm? 
+What exactly is an arc? How does it transform into code? 
+What is the Dijkers algorithm? 
+
+*/
