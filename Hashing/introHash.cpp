@@ -10,7 +10,7 @@ size_t myHash(const std::string &key, size_t tableSize)
     for (char c : key)
     {
         sum += static_cast<size_t>(c); // Convert char to its ASCII value
-       // sum += (int)c;
+                                       // sum += (int)c;
     }
     return sum % tableSize; // Ensures the index is within bounds of the table
 }

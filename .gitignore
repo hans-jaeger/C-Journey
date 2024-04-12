@@ -1,1 +1,20 @@
+#Global Ignoring :
+*
+!*/
+!*.cpp
+!*.h
+
+tempCodeRunnerFile.cpp
+
+#Directories:
 Topic 6/    
+Topic 7/
+#Exclude Files that end with Demo
+#[dD] is for captialized or lowercase words. 
+# * refers to before and after. 
+*[dD]emo.*
+
+# Within Inheirtance Section:
+Combined.cpp
+ 
+
